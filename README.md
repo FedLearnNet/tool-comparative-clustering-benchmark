@@ -1,4 +1,4 @@
-# tool-comparative-clustering-benchmark
+# comparative-clustering-benchmark
 
 Compares clustering outputs using internal quality scores and optional ground-truth labels.
 

@@ -64,8 +64,8 @@ config:
     shape: null
     type: CSV
 info:
-  name: tool-comparative-clustering-benchmark
-  slug: tool-comparative-clustering-benchmark
+  name: comparative-clustering-benchmark
+  slug: comparative-clustering-benchmark
   type: EVALUATION
   sourceUrl: https://github.com/FedLearnNet/tool-comparative-clustering-benchmark
   shortDescription: Compares clustering outputs using internal quality scores and

@@ -1,0 +1,73 @@
+config:
+  hyperparams:
+  - default: sample_id
+    description: Column name used as unique sample identifier.
+    maxValue: null
+    minValue: null
+    name: id_column
+    options: []
+    pattern: null
+    type: STRING
+  - default: cluster_label
+    description: Default label column name for clustering predictions.
+    maxValue: null
+    minValue: null
+    name: truth_label_column
+    options: []
+    pattern: null
+    type: STRING
+  - default: silhouette
+    description: Metric used to rank clustering models.
+    maxValue: null
+    minValue: null
+    name: sort_by
+    options:
+    - silhouette
+    - davies_bouldin
+    - calinski_harabasz
+    - adjusted_rand
+    - adjusted_mutual_info
+    pattern: null
+    type: CATEGORICAL
+  input:
+  - description: Feature table as CSV, including the sample identifier column.
+    maxValue: null
+    minValue: null
+    name: features
+    required: true
+    shape: null
+    hasHeader: true
+    type: CSV
+  - description: Prediction table as CSV, containing the sample identifier and one
+      or more clustering result columns.
+    maxValue: null
+    minValue: null
+    name: predictions
+    required: true
+    shape: null
+    hasHeader: true
+    type: CSV
+  - description: Optional ground truth table as CSV, containing the sample identifier
+      and true label column.
+    maxValue: null
+    minValue: null
+    name: ground_truth
+    required: false
+    shape: null
+    hasHeader: true
+    type: CSV
+  output:
+  - description: Benchmark scores for all clustering prediction columns as CSV.
+    maxValue: null
+    minValue: null
+    name: output
+    shape: null
+    type: CSV
+info:
+  name: tool-comparative-clustering-benchmark
+  slug: tool-comparative-clustering-benchmark
+  type: EVALUATION
+  sourceUrl: https://github.com/FedLearnNet/tool-comparative-clustering-benchmark
+  shortDescription: Compares clustering outputs using internal quality scores and
+    optional ground-truth labels.
+  longDescription: null
